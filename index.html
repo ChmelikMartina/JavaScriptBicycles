@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chmelikova JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Kolosalon - pujcovna kol</h1>
+    <form>
+      <fieldset class="kolo">
+        <legend>Typ kola</legend>
+        <div>
+          <label class="typ-kola">
+            <input
+              type="checkbox"
+              name="chb-group-kola"
+              id="horske"
+              value="500"
+            />
+            horske 500 Kc/den
+          </label>
+          <label class="kola-ks"
+            ><input
+              type="number"
+              id="horske-ks"
+              name="chb-group-ks"
+              min="0"
+              max="10"
+              value="0"
+            />
+            ks</label
+          >
+        </div>
+        <div>
+          <label class="typ-kola">
+            <input
+              type="checkbox"
+              name="chb-group-kola"
+              id="detske"
+              value="200"
+            />
+            detske 200 Kc/den
+          </label>
+          <label class="kola-ks"
+            ><input
+              type="number"
+              id="detkse-ks"
+              name="chb-group-ks"
+              min="0"
+              max="10"
+              value="0"
+            />
+            ks</label
+          >
+        </div>
+        <div>
+          <label class="typ-kola">
+            <input
+              type="checkbox"
+              name="chb-group-kola"
+              id="silnicni"
+              value="1500"
+            />
+            silnicni 1500 Kc/den
+          </label>
+          <label class="kola-ks"
+            ><input
+              type="number"
+              name="chb-group-ks"
+              id="silnicni-ks"
+              min="0"
+              max="10"
+              value="0"
+            />
+            ks</label
+          >
+        </div>
+        <div>
+          <label class="typ-kola">
+            <input
+              type="checkbox"
+              name="chb-group-kola"
+              id="gravel"
+              value="2500"
+            />
+            gravel 2500 Kc/den
+          </label>
+          <label class="kola-ks"
+            ><input
+              type="number"
+              name="chb-group-ks"
+              id="gravel-ks"
+              min="0"
+              max="10"
+              value="0"
+            />
+            ks</label
+          >
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Doba zapujceni</legend>
+        <select name="doba" id="doba">
+          <option value="5">5 dnu</option>
+          <option value="7">7 dnu</option>
+          <option value="14">14 dnu</option>
+          <option value="30">30 dnu</option>
+        </select>
+      </fieldset>
+      <fieldset class="nosic" id="nosic">
+        <legend>Nosic</legend>
+        <label>
+          <input type="radio" name="nosic" value="1.05" />
+          cyklonosic stresni (+ 5 % z celkove ceny zapujcky navic)
+        </label>
+        <label>
+          <input type="radio" name="nosic" value="1.10" />
+          cyklonosic na tazne zarizeni (+ 10 % z celkove ceny zapujcky navic)
+        </label>
+        <label>
+          <input type="radio" name="nosic" value="1" checked />
+          neni treba cyklonosic
+        </label>
+      </fieldset>
+      <div class="cena-celkem">
+        <button type="button" id="cena-celkem">Spocitat cenu</button>
+        <p>Celkem: <span id="cena-celkem-vypis">0</span> Kc</p>
+      </div>
+      <div>
+        <label>
+          Maximalne mohu uhradit:
+          <input
+            type="number"
+            name="max-utrata"
+            id="max-utrata"
+            min="0"
+            value="0"
+          />
+        </label>
+        <p id="max-utrata-zprava"></p>
+      </div>
+      <label
+        >E-mail:
+        <input type="email" name="email" required />
+      </label>
+      <button type="submit" id="submit">Odeslat objednavku</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

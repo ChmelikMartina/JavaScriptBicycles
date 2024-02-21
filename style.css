@@ -1,0 +1,21 @@
+form {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.kolo {
+  width: 467px;
+}
+
+.nosic {
+  display: flex;
+  flex-direction: column;
+}
+.cena-celkem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
